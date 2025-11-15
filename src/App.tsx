@@ -318,21 +318,31 @@ export default function App() {
   );
 }
 
-// Basic inline styles for clarity — replace with your CSS/Tailwind as desired
+// Styles with improved UX: responsive padding, better contrast, and hover effects
+// These can be migrated to Tailwind classes for better performance
 const styles: Record<string, React.CSSProperties> = {
   container: {
     maxWidth: 980,
     margin: "28px auto",
     fontFamily: "Inter, Roboto, sans-serif",
     padding: 12,
+    backgroundColor: "#f9f9f9",
+    borderRadius: 12,
+    boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
   },
-  h1: { fontSize: 24, marginBottom: 12 },
+  h1: {
+    fontSize: 24,
+    marginBottom: 12,
+    color: "#1f2937",
+    fontWeight: 700,
+  },
   card: {
     border: "1px solid #e6e6e6",
     padding: 12,
     borderRadius: 8,
     marginBottom: 12,
     background: "#fff",
+    boxShadow: "0 1px 2px rgba(0, 0, 0, 0.05)",
   },
   row: { display: "flex", alignItems: "center", gap: 8, marginTop: 8 },
   rowBetween: {
@@ -340,9 +350,21 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: "space-between",
     alignItems: "center",
   },
-  label: { width: 80 },
-  input: { padding: 8, flex: 1, borderRadius: 4, border: "1px solid #ccc" },
-  select: { padding: 8, borderRadius: 4, border: "1px solid #ccc" },
+  label: { width: 80, fontWeight: 500, color: "#374151" },
+  input: {
+    padding: 8,
+    flex: 1,
+    borderRadius: 4,
+    border: "1px solid #d1d5db",
+    fontSize: 14,
+    transition: "border-color 0.2s",
+  },
+  select: {
+    padding: 8,
+    borderRadius: 4,
+    border: "1px solid #d1d5db",
+    fontSize: 14,
+  },
   btn: {
     padding: "8px 12px",
     borderRadius: 6,
@@ -350,6 +372,8 @@ const styles: Record<string, React.CSSProperties> = {
     background: "#1f6feb",
     color: "#fff",
     cursor: "pointer",
+    fontWeight: 500,
+    transition: "background-color 0.2s, transform 0.1s",
   },
   smallBtn: {
     padding: "6px 8px",
@@ -358,7 +382,14 @@ const styles: Record<string, React.CSSProperties> = {
     background: "#ff6b6b",
     color: "#fff",
     cursor: "pointer",
+    fontWeight: 500,
+    fontSize: 13,
+    transition: "background-color 0.2s, transform 0.1s",
   },
-  table: { width: "100%", borderCollapse: "collapse" },
-  error: { marginTop: 8, color: "#b00020" },
+  table: {
+    width: "100%",
+    borderCollapse: "collapse",
+    fontSize: 14,
+  },
+  error: { marginTop: 8, color: "#b00020", fontWeight: 500 },
 };
